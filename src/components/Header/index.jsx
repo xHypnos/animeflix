@@ -5,9 +5,20 @@ import Search from "../Search";
     
 const Container = styled.div`
     display: flex;
-    padding: 1rem;
+    padding: 1rem 2rem;
     justify-content: space-between;
     background: #555555;
+
+    @media screen and (max-width:500px){
+        height: 120px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1400px){
+        
+    }
 `
 
 const Img = styled.img`
