@@ -7,12 +7,18 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
+    #root{
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
+    }
+
     body{
         background: #999999;
     }
 
     h1,h2,h3{
-        font-family: 'Concert One', cursive;
+        ${'' /* font-family: 'Concert One', cursive; */}
     } 
 `
 

@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
+
+
 const ImgCover = styled.img`
-    padding: 1rem;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 450px;
-    margin: auto;
+    border-radius: 8px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
 `
 
-const Cover = ({width}) => {
-    return <ImgCover width={width} src="https://static.cinepolis.com/resources/mx/movies/posters/414x603/40390-869944-20221102034309.jpg" alt="Cover" />
+const Cover = ({width, image}) => {
+    return <ImgCover width={width} src={image} alt="Cover" />
 }
 
 export default Cover;

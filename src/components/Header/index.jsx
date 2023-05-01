@@ -1,8 +1,8 @@
 import Logo from "../../assets/images/logo.svg";
 import styled from "styled-components";
 import Search from "../Search";
+import { Link } from "react-router-dom";
 
-    
 const Container = styled.div`
     display: flex;
     padding: 1rem 2rem;
@@ -27,9 +27,8 @@ const Img = styled.img`
 
 const Header = () => {
     return <Container>
-        <Img src={Logo} alt="Animeflix Logo"/>
+        <Link to={"/"}><Img src={Logo} alt="Animeflix Logo"/></Link>
         <Search/>
-        
     </Container>
 }
 

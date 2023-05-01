@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "../../assets/images/logo.svg"
-import Link from "../Link/Link";
+import Enlace from "../Enlace/Enlace";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     display: flex;
@@ -28,25 +29,21 @@ const Redes = styled.ul`
 
     a{
         margin-right: 10px;
-        color: #fff;
     }
 `
 
 const Text = styled.p`
     margin: 0;
-    a{
-        color: #fff;
-    }
 `
 
 const Footer = () => {
     return <Container>
         <Box>
-            <Img src={Logo} alt="Logo Animeflix"/>
+            <Link to={"/"}><Img src={Logo} alt="Logo Animeflix"/></Link>
             <Redes>
-                <Link texto = {<ion-icon size="large" name="logo-facebook"></ion-icon>} link = "https://www.facebook.com"/>
-                <Link texto = {<ion-icon size="large" name="logo-instagram"></ion-icon>} link = "https://www.instagram.com"/>
-                <Link texto = {<ion-icon size="large" name="logo-twitter"></ion-icon>} link = "https://www.twitter.com"/>
+                <Enlace texto = {<ion-icon size="large" name="logo-facebook"></ion-icon>} link = "https://www.facebook.com"/>
+                <Enlace texto = {<ion-icon size="large" name="logo-instagram"></ion-icon>} link = "https://www.instagram.com"/>
+                <Enlace texto = {<ion-icon size="large" name="logo-twitter"></ion-icon>} link = "https://www.twitter.com"/>
             </Redes> 
         </Box>
         <Box>
@@ -54,7 +51,7 @@ const Footer = () => {
         </Box>
         <Box>
             <Text>Proyecto educativo Alura Latam</Text>
-            <Text>Desarrollado por <Link link="https://andresmontes.dev" texto ="Andrés Montes"/></Text>
+            <Text>Desarrollado por <Enlace link="https://andresmontes.dev" texto ="Andrés Montes"/></Text>
         </Box>
     </Container>
 

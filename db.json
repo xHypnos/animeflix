@@ -18,14 +18,42 @@
     
     "trailers": [
         {
-            "id": 1,
+            "id": 3,
+            "portada": "https://es.web.img2.acsta.net/pictures/22/05/24/17/26/1923273.jpg",
+            "titulo": "One Piece - Film Red",
+            "descripcion": "Los Piratas de Sombrero de Paja van a un festival de música en la isla de Elegia a ver el concierto de Uta, una diva de enorme fama. Lo que iba a ser un concierto normal es interrumpido por una gran revelación por parte de Luffy: Uta es hija del Emperador Pirata Shanks.",
+            "video": "https://www.youtube.com/watch?v=kE8lM3tAeGg"
+        },
+        {
+            "id": 4,
+            "portada": "https://static.cinepolis.com/resources/mx/movies/posters/414x603/41495-129101-20230308040207.jpg",
+            "titulo": "Kimetsu no Yaiba - Swordsmith Village",
+            "descripcion": "Dos meses después, Tanjiro todavía se está recuperando de sus heridas cuando Zenitsu e Inosuke son llamados a misiones individuales. Debido a que su herrero Hotaru Haganezuka se había negado a forjarle una nueva espada debido a que rompió las anteriores, se le dice a Tanjiro que se reúna con él en Swordsmith Village para hablar con él en persona.",
+            "video": "https://www.youtube.com/watch?v=C_pKddExbXI"
+        },
+        {
+            "id": 5,
             "portada": "https://static.wikia.nocookie.net/onepiece/images/4/45/One_Piece_Film_Red.png/revision/latest?cb=20220608133146&path-prefix=es",
             "titulo": "One Piece - Film Red",
             "descripcion": "Los Piratas de Sombrero de Paja van a un festival de música en la isla de Elegia a ver el concierto de Uta, una diva de enorme fama. Lo que iba a ser un concierto normal es interrumpido por una gran revelación por parte de Luffy: Uta es hija del Emperador Pirata Shanks.",
             "video": "https://www.youtube.com/watch?v=kE8lM3tAeGg"
         },
         {
-            "id": 2,
+            "id": 6,
+            "portada": "https://static.cinepolis.com/resources/mx/movies/posters/414x603/41495-129101-20230308040207.jpg",
+            "titulo": "Kimetsu no Yaiba - Swordsmith Village",
+            "descripcion": "Dos meses después, Tanjiro todavía se está recuperando de sus heridas cuando Zenitsu e Inosuke son llamados a misiones individuales. Debido a que su herrero Hotaru Haganezuka se había negado a forjarle una nueva espada debido a que rompió las anteriores, se le dice a Tanjiro que se reúna con él en Swordsmith Village para hablar con él en persona.",
+            "video": "https://www.youtube.com/watch?v=C_pKddExbXI"
+        },
+        {
+            "id": 7,
+            "portada": "https://static.wikia.nocookie.net/onepiece/images/4/45/One_Piece_Film_Red.png/revision/latest?cb=20220608133146&path-prefix=es",
+            "titulo": "One Piece - Film Red",
+            "descripcion": "Los Piratas de Sombrero de Paja van a un festival de música en la isla de Elegia a ver el concierto de Uta, una diva de enorme fama. Lo que iba a ser un concierto normal es interrumpido por una gran revelación por parte de Luffy: Uta es hija del Emperador Pirata Shanks.",
+            "video": "https://www.youtube.com/watch?v=kE8lM3tAeGg"
+        },
+        {
+            "id": 8,
             "portada": "https://static.cinepolis.com/resources/mx/movies/posters/414x603/41495-129101-20230308040207.jpg",
             "titulo": "Kimetsu no Yaiba - Swordsmith Village",
             "descripcion": "Dos meses después, Tanjiro todavía se está recuperando de sus heridas cuando Zenitsu e Inosuke son llamados a misiones individuales. Debido a que su herrero Hotaru Haganezuka se había negado a forjarle una nueva espada debido a que rompió las anteriores, se le dice a Tanjiro que se reúna con él en Swordsmith Village para hablar con él en persona.",
