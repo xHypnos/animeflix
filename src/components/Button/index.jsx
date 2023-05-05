@@ -1,24 +1,29 @@
 import styled from "styled-components"
 
 const Btn = styled.button`
-    text-align: center;
-    width: 150px;
+    width: 200px;
     padding: 10px;
     border: 1px solid #ffffff;
     border-radius: 5px;
+    margin-top: 10px;
     cursor: pointer;
     color: #ffffff;
     background: none;
     font-size: 18px;
-    transition: 300ms;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
     :hover{
         background: #ffffff;
         color: #000000;
     }
 `
 
-const Button = ({text}) =>{
-    return <Btn>{text}</Btn>
+const Button = ({text, ion}) =>{
+    return <Btn>{ion}{text}</Btn>
 }
 
 export default Button;

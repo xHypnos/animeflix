@@ -18,7 +18,6 @@ const SubTitle = styled.h2`
     margin: 10px auto;
 `
 
-
 const VideoPlayer = () => {
     const [anime, setAnime] = useState({});
     const {id} = useParams();

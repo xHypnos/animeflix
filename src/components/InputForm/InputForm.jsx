@@ -29,14 +29,14 @@ const StyledTextArea = styled.textarea`
 
 const InputForm = ({label, actualizar, id, loadImg}) => {
     const {texto, tipo, placeholder, required, valor} = label;
+    const path =  window.location.pathname;
 
     const manejarCambio = (e) =>{
-        console.log(e.target.value);
         actualizar(e.target.value);
     }
     
     const cargarImg = (e) =>{
-        if(id === 0){
+        if(id === 0 && path === "/new"){
             const img = e.target.value;
             loadImg(img);
         }   

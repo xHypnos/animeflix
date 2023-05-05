@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ErrorImg from "../images/404.webp";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     position: relative;
@@ -9,6 +10,7 @@ const Container = styled.div`
     width: 80%;
     margin: auto;
     align-items: center;
+    padding: 10px;
 `
 const Image = styled.img`
     width: 80%;
@@ -23,7 +25,7 @@ const Error404 = () => {
 
     return <Container>
         <Image src={ErrorImg} alt="Error 404" />
-        <Button text="Regresar" enlace={`/`}/>
+        <Link to="/"><Button text="Regresar"/></Link>
     </Container>
 }
 

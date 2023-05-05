@@ -3,6 +3,7 @@ import Cover from "../../components/Cover";
 import Banner from "../../components/Banner";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { onGetAnimes } from "../../firebase";
 
 const Container = styled.div`
     display: flex;
@@ -102,7 +103,17 @@ const Main = () => {
         "duracion": "11 Episodios"
         }
         ]);
-    
+
+    window.addEventListener("DOMContentLoaded", async() =>{
+        onGetAnimes((querySnapshot) => {
+            querySnapshot.forEach((snapshot) =>{
+                setAnimes([...animes, snapshot.data()]);
+            })
+        }) 
+    })
+
+    console.log(animes);
+
     const [banner, setBanner] = useState(animes.length);
 
     useEffect(() => {
@@ -117,8 +128,8 @@ const Main = () => {
             <Grid>
                 {animes.map((anime, i) => {
                     const {id, titulo, portada} = anime;
-                    return <Container>
-                        <StyledLink to={`/player/${id}`}><Cover key={i} width={"280px"} image={portada}/></StyledLink>
+                    return <Container  key={i}>
+                        <StyledLink to={`/player/${id}`}><Cover width={"280px"} image={portada}/></StyledLink>
                         <TituloCover>{titulo}</TituloCover>
                     </Container> 
                 })}            
