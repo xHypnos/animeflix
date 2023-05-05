@@ -93,7 +93,7 @@ const Register = () => {
             <Texto>¿Ya tienes una cuenta? <StyledLink to={"/login"}>¡Ingresa aqui!</StyledLink></Texto>  
         </Form>
         <Texto>--- O ---</Texto>
-        <Button onClick={googleSignin} text="Regístrate con Google" ion={<ion-icon name="logo-google"></ion-icon>}/>
+        <Button funcion={googleSignin} text="Regístrate con Google" ion={<ion-icon name="logo-google"></ion-icon>}/>
     </Container>
     
     

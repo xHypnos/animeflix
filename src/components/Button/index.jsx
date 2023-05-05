@@ -22,8 +22,8 @@ const Btn = styled.button`
     }
 `
 
-const Button = ({text, ion}) =>{
-    return <Btn>{ion}{text}</Btn>
+const Button = ({text, ion, funcion}) =>{
+    return <Btn onClick={funcion}>{ion}{text}</Btn>
 }
 
 export default Button;
