@@ -1,8 +1,7 @@
 import Logo from "../../assets/images/logo.svg";
 import styled from "styled-components";
 import Search from "../Search";
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/authContext";
+import { Link } from "react-router-dom";
 import UserIcon from "../UserIcon";
 
 const Container = styled.div`
@@ -37,7 +36,7 @@ const Img = styled.img`
 const Header = () => {
     return <Container>
         <Box>
-            <Link to={"/"}><Img src={Logo} alt="Animeflix Logo"/></Link>
+            <Link to={"/main"}><Img src={Logo} alt="Animeflix Logo"/></Link>
             <Search/>
         </Box>
         <UserIcon/>

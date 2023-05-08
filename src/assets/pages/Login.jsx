@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import InputForm from "../../components/InputForm/InputForm";
 import { useState } from "react";
-import Button from "../../components/Button";
+import {Button} from "../../components/Button";
 import { useAuth } from "../../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
 import Alert from "../../components/Alert";

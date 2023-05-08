@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useAuth } from "../context/authContext";
 import { Link } from "react-router-dom";
-import ProfileImg from "../assets/images/profile.jpg"
+import Photo from "../assets/images/profile.jpg"
 
 const Container = styled.div`
     display: flex;
@@ -79,8 +79,7 @@ const UserIcon = () => {
     return <Container>
         <LoggedLink to="/profile">
             <Text>{user.displayName ? user.displayName : user.email}</Text>
-            <Img src={user.photoURL ? user.photoURL : ProfileImg}></Img>
-            <profileImg src={user.photoURL}/>
+            <Img src={user.photoURL ? user.photoURL : Photo}></Img>
         </LoggedLink>
         <Button onClick={cerrarSesion}><ion-icon  name="log-out-outline"></ion-icon></Button>
     </Container>

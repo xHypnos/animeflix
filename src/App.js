@@ -11,6 +11,7 @@ import Register from "./assets/pages/Register";
 import Login from "./assets/pages/Login";
 import { ProtectedRoute, ProtectedUserRL } from "./components/ProtectedRoute";
 import Profile from "./assets/pages/Profile";
+import Landing from "./assets/pages/Landing";
 
 function App() {
 
@@ -23,6 +24,10 @@ function App() {
           <Routes>
             <Route
               path="/"
+              element={ <Landing/> }
+            />
+            <Route
+              path="/main"
               element={ <Main/>}
             />
             <Route
@@ -32,7 +37,7 @@ function App() {
                       </ProtectedUserRL> }
             />
             <Route
-              path="login"
+              path="/login"
               element={ <ProtectedUserRL>
                           <Login/>
                       </ProtectedUserRL> }

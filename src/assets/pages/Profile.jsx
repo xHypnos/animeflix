@@ -1,6 +1,6 @@
 import { useAuth } from "../../context/authContext";
 import styled from "styled-components";
-import ProfileImg from "../images/profile.jpg";
+import Photo from "../images/profile.jpg";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -42,7 +42,7 @@ const Profile = () => {
 
 return <Container>
         <Subtitle>Bienvenido {user.displayName ? user.displayName : "Otaku"}!</Subtitle>
-        <Img src={user.photoURL ? user.photoURL : ProfileImg}/>
+        <Img src={user.photoURL ? user.photoURL : Photo}/>
         <Texto>Miembro desde: {formatoFecha(creationTime)}</Texto>
         <Texto>Email: {user.email}</Texto>
         <Link to={"/new"}>Agregar Animes</Link>

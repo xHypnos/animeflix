@@ -14,7 +14,6 @@ const Btn = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    
 
     :hover{
         background: #ffffff;
@@ -22,8 +21,6 @@ const Btn = styled.button`
     }
 `
 
-const Button = ({text, ion, funcion}) =>{
+export const Button = ({text, ion, funcion}) =>{
     return <Btn onClick={funcion}>{ion}{text}</Btn>
 }
-
-export default Button;

@@ -2,7 +2,9 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, 
   collection, 
-  addDoc, 
+  addDoc,
+  setDoc,
+  where,
   getDoc, 
   getDocs,
   onSnapshot,
@@ -34,21 +36,28 @@ const db = getFirestore();
 export const auth = getAuth(app);
 
 export const createAnime = ({id, portada, titulo, descripcion, video, fecha, director, duracion}) => {
-  addDoc(collection(db, "animes"),{id, portada, titulo, descripcion, video, fecha, director, duracion});
+  addDoc(collection(db, "animes"), {id, portada, titulo, descripcion, video, fecha, director, duracion});
 }
    
-export const getAnimes = () => {
-  getDocs(collection(db, "animes"));
+export const getAnimes = async () => {
+  let animes = [];
+  getDocs(collection(db, "animes"))
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc)=>{
+        animes.push(doc.data());
+      });
+    });
+  return animes;
 }
    
 export const onGetAnimes = (callback) => 
-    onSnapshot(collection(db, "animes"), callback);
+  onSnapshot(collection(db, "animes"), callback);
+
+export const getAnime = (id) => 
+  getDoc(doc(collection(db, "animes")), where(id, "==", id));
 
 /* export const deleteAnime = (id) => 
     deleteDoc(doc(db, "animes", id)); 
-
-export const getAnime = (id) => 
-    getDoc(doc(db, "animes", id));
 
 export const updateAnime = (id, datos) => 
     updateDoc(doc(db, "animes", id), datos); */
