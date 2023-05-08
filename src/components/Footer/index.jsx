@@ -39,7 +39,7 @@ const Text = styled.p`
 const Footer = () => {
     return <Container>
         <Box>
-            <Link to={"/"}><Img src={Logo} alt="Logo Animeflix"/></Link>
+            <Link to={"/main"}><Img src={Logo} alt="Logo Animeflix"/></Link>
             <Redes>
                 <Enlace texto = {<ion-icon size="large" name="logo-facebook"></ion-icon>} link = "https://www.facebook.com"/>
                 <Enlace texto = {<ion-icon size="large" name="logo-instagram"></ion-icon>} link = "https://www.instagram.com"/>

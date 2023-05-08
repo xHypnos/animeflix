@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ErrorImg from "../images/404.webp";
-import Button from "../../components/Button";
+import {Button} from "../../components/Button";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
