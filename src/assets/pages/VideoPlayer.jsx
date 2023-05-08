@@ -2,7 +2,6 @@ import VideoFrame from "../../components/VideoFrame/VideoFrame";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import testFondo from "../images/logo2x.png"
 
 const Container = styled.div`
     width: 100%;
