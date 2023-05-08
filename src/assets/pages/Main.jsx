@@ -75,22 +75,42 @@ const Main = () => {
     const [loading, setLoading] = useState(true);
     const [animes, setAnimes] = useState(animesLocal);
     const [banner, setBanner] = useState(0);
-      
-    window.addEventListener('DOMContentLoaded', async () => {
-        animesLocal === null ? setLoading(true) : setAnimes(animesLocal);
+    
+    const getData = async () =>{
         onGetAnimes((querySnapshot) => {
             let animeData = [];
-
+            
             querySnapshot.forEach((snapshot) => {
                 animeData.push(snapshot.data());
             });
 
+            console.log(animeData);
+            window.localStorage.setItem('listaAnime', JSON.stringify(animeData));
+            setAnimes(animeData);
+            setLoading(false);
+        });
+    };
+
+    useEffect( () => {
+        getData();
+    }, []);
+
+    /* window.addEventListener('DOMContentLoaded', async () => {
+        onGetAnimes((querySnapshot) => {
+            let animeData = [];
+
+            querySnapshot.forEach((snapshot) => {
+                console.log(snapshot.data());
+                animeData.push(snapshot.data());
+            });
+
+            console.log(animeData);
             window.localStorage.setItem('listaAnime', JSON.stringify(animeData));
             setAnimes(animeData);
             setLoading(false);
             
         });
-    });
+    }); */
 
     useEffect(() => {
         if(!animesLocal){  

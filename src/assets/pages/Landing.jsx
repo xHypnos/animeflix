@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import {Button} from "../../components/Button";
 import Background from "../images/logo2x.png";
 import { onGetAnimes } from "../../firebase";
+import { useEffect } from "react";
 
 const Container = styled.div`
     width: 100%;
@@ -60,8 +61,25 @@ align-items: center;
 
 const Landing = () => {
     const {user} = useAuth();
+    
+    const getData = async () =>{
+        onGetAnimes((querySnapshot) => {
+            let animeData = [];
+            
+            querySnapshot.forEach((snapshot) => {
+                animeData.push(snapshot.data());
+            });
 
-    window.addEventListener('DOMContentLoaded', async () => {
+            console.log(animeData);
+            window.localStorage.setItem('listaAnime', JSON.stringify(animeData));
+        });
+    };
+
+    useEffect( () => {
+        getData();
+    }, []);
+
+    /* window.addEventListener('DOMContentLoaded', async () => {
         onGetAnimes((querySnapshot) => {
             let animeData = [];
 
@@ -72,7 +90,7 @@ const Landing = () => {
             window.localStorage.setItem('listaAnime', JSON.stringify(animeData));
             
         });
-    });
+    }); */
 
     return <Container>
         {user ? <Profile/> : <Box>

@@ -39,19 +39,12 @@ export const createAnime = ({id, portada, titulo, descripcion, video, fecha, dir
   addDoc(collection(db, "animes"), {id, portada, titulo, descripcion, video, fecha, director, duracion});
 }
    
-export const getAnimes = async () => {
-  let animes = [];
-  getDocs(collection(db, "animes"))
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc)=>{
-        animes.push(doc.data());
-      });
-    });
-  return animes;
-}
-   
-export const onGetAnimes = (callback) => 
+export const getAnimes = () => 
+  getDocs(collection(db, "animes"));
+
+export const onGetAnimes = (callback) => {
   onSnapshot(collection(db, "animes"), callback);
+}
 
 export const getAnime = (id) => 
   getDoc(doc(collection(db, "animes")), where(id, "==", id));
