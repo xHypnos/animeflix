@@ -60,7 +60,7 @@ const Login = () => {
     "actualizar": `${setEmail}`},
     {"texto": "Password: ",
     "tipo": "password",
-    "placeholder": "Ingrese nombre del anime",
+    "placeholder": "Ingrese su contraseña",
     "required": true,
     "valor": `${password}`,
     "actualizar": `${setPassword}`}]
