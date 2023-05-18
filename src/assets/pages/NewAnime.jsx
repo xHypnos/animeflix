@@ -10,10 +10,18 @@ const Container = styled.div`
     padding: 1rem;
     margin: auto;
     flex-direction: column;
+
+    @media screen and (max-width: 700px){
+        width: 100%;
+    }
 `
 
 const Box = styled(Container)`
     flex-direction: row;
+
+    @media screen and (max-width: 700px){
+        flex-direction: column;
+    }
 `
 
 const Titulo = styled.h2`
