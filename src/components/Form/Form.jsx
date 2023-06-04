@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import InputForm from "../InputForm/InputForm"
-import {Button} from "../Button"
+import {Button} from "../Button/Button"
 import { useState } from "react"
 import { v4 as uuid } from "uuid"
 import { createAnime } from "../../firebase"
+import MessageWindow from "../MessageWindow"
 
 const StyledForm = styled.form`
     display: flex;
@@ -19,6 +20,8 @@ const Form = ({loadImg}) => {
     const [director, setDirector] = useState("");
     const [duracion, setDuracion] = useState("");
     const [descripcion, setDescripcion] = useState("");
+
+    const [message, setMessage] = useState(false);
     
     const funciones = [setCaratula, setTitulo, setVideo, setFecha, setDirector, setDuracion, setDescripcion];
 
@@ -59,6 +62,16 @@ const Form = ({loadImg}) => {
         "required": true,
         "valor": `${descripcion}`},
     ];
+
+    const resetForm = () => {
+        setCaratula(""); 
+        setTitulo("");
+        setVideo("");
+        setFecha("");
+        setDirector("");
+        setDuracion("");
+        setDescripcion("");
+    };
     
     const agregarAnime = (e) => {
         e.preventDefault();
@@ -75,15 +88,20 @@ const Form = ({loadImg}) => {
             };
         
         createAnime(nuevoAnime);
-    }
+        resetForm();
+        setMessage(true);
+    };
 
-    return <StyledForm onSubmit={agregarAnime}>
-        {datosForm.map((dato, i) => {return <InputForm loadImg={loadImg} key={i} id={i} actualizar={funciones[i]} label={dato}/>})}
-        <Button 
-        text="Agregar"
-        onSubmit
-        />
-    </StyledForm>
+    return <>
+        <StyledForm onSubmit={agregarAnime}>
+            {datosForm.map((dato, i) => {return <InputForm loadImg={loadImg} key={i} id={i} actualizar={funciones[i]} label={dato}/>})}
+            <Button 
+            text="Agregar"
+            onSubmit
+            />
+        </StyledForm>
+        {message && <MessageWindow func={()=>setMessage(false)} text="¡Anime Agregado Exitosamente!"/>}  
+    </>
 }
 
 export default Form;

@@ -84,7 +84,6 @@ const Main = () => {
                 animeData.push(snapshot.data());
             });
 
-            console.log(animeData);
             window.localStorage.setItem('listaAnime', JSON.stringify(animeData));
             setAnimes(animeData);
             setLoading(false);

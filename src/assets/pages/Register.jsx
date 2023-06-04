@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import InputForm from "../../components/InputForm/InputForm";
 import { useState } from "react";
-import {Button} from "../../components/Button";
+import {Button} from "../../components/Button/Button";
 import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";

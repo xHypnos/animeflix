@@ -2,7 +2,7 @@ import { useAuth } from "../../context/authContext";
 import styled from "styled-components";
 import Profile from "./Profile";
 import { Link } from "react-router-dom";
-import {Button} from "../../components/Button";
+import {Button} from "../../components/Button/Button";
 import Background from "../images/logo2x.png";
 import { onGetAnimes } from "../../firebase";
 import { useEffect } from "react";
